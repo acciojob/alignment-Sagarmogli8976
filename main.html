@@ -5,33 +5,23 @@
 <head>
 	<link rel="stylesheet" href="styles.css">
 	<style>
-        table.middle {
-            border: 1px solid black;
-            border-spacing: 1px;
+        table {
+            border-collapse: collapse;
             width: 100%;
         }
 
-        table.middle td, 
-        table.middle th {
+        td {
             border: 1px solid black;
             padding: 1px;
         }
 
-        .center {
-            text-align: center;
+        .middle {
+            margin: 20px auto;
         }
 
-        .right {
-            text-align: right;
-        }
-
-        .green {
-            background-color: green;
-        }
-
-        .blue {
-            background-color: blue;
-        }
+        .left { text-align: left; }
+        .center { text-align: center; }
+        .right { text-align: right; }
     </style>
 </head>
 
@@ -39,77 +29,87 @@
 	<!-- the entire body must be written by student -->
 	<h2 align="center">HTML Assignment #3</h2>
 
-    <!-- First Table -->
-    <table border="1" width="100%">
-        <tbody>
-            <tr>
-                <td align="left">left</td>
-                <td align="center">center</td>
-                <td align="right">right</td>
-            </tr>
-            <tr>
-                <td align="left">left</td>
-                <td align="center">center</td>
-                <td align="right">right</td>
-            </tr>
-            <tr>
-                <td align="left">left</td>
-                <td align="center">center</td>
-                <td align="right">right</td>
-            </tr>
-        </tbody>
-    </table>
+<!-- TABLE 1 -->
+<table id="table-1" class="middle">
+    <tbody>
+        <tr>
+            <td class="left">left</td>
+            <td id="t12" class="center">center</td>
+            <td id="t13" class="right">right</td>
+        </tr>
+        <tr>
+            <td class="left">left</td>
+            <td class="center">center</td>
+            <td class="right">right</td>
+        </tr>
+        <tr>
+            <td class="left">left</td>
+            <td class="center">center</td>
+            <td class="right">right</td>
+        </tr>
+    </tbody>
+</table>
 
-    <br><br>
+<br><br>
 
-    <!-- Second Complex Table -->
-    <table border="1" width="100%">
-        <tbody>
-            <tr>
-                <td colspan="5"></td>
-            </tr>
-            <tr>
-                <td rowspan="3" width="15%"></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td rowspan="3" width="15%"></td>
-            </tr>
-            <tr>
-                <td colspan="3" height="50px"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td colspan="5"></td>
-            </tr>
-        </tbody>
-    </table>
+<!-- TABLE 2 -->
+<table id="table-2" class="middle">
+    <tbody>
+        <tr>
+            <td id="t21" colspan="6"></td>
+        </tr>
 
-    <br><br>
+        <tr>
+            <td rowspan="3"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td rowspan="3"></td>
+        </tr>
 
-    <!-- Third Table with Colors and Image -->
-    <table border="1" width="100%">
-        <tbody>
-            <tr>
-                <td colspan="3" bgcolor="green" height="30px"></td>
-            </tr>
-            <tr>
-                <td width="30%"></td>
-                <td align="center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Michael_Jordan_in_1987.jpg" 
-                         width="300px">
-                </td>
-                <td width="30%"></td>
-            </tr>
-            <tr>
-                <td colspan="3" bgcolor="blue" height="30px"></td>
-            </tr>
-        </tbody>
-    </table>
+        <tr>
+            <td colspan="4" height="40px"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td colspan="6"></td>
+        </tr>
+    </tbody>
+</table>
+
+<br><br>
+
+<!-- TABLE 3 -->
+<table id="table-3" class="middle">
+    <tbody>
+        <tr>
+            <td colspan="3" style="background-color: green; height:30px;"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+
+            <td id="t-image" class="center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Michael_Jordan_in_1987.jpg" width="300">
+            </td>
+
+            <td></td>
+        </tr>
+
+        <tr>
+            <td colspan="3" style="background-color: blue; height:30px;"></td>
+        </tr>
+    </tbody>
+</table>
+
     <script type="text/javascript" src="./script.js">
 </script>
 
